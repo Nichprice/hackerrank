@@ -12,8 +12,6 @@ import sys
 # The function is expected to return a STRING.
 # The function accepts STRING s as parameter.
 #
-s = "07:05:45PM"
-
 
 def timeConversion(s):
     # Write your code here
@@ -25,18 +23,16 @@ def timeConversion(s):
         if time[0] == "12":
             time[0] == ""
     ntime = ":".join(time)
-    print(ntime[:-2])
-    return str(ntime[:-2])
+    better = str(ntime[:-2])
+    return better
 
-timeConversion(s)
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
-# if __name__ == '__main__':
-#     fptr = open(os.environ['OUTPUT_PATH'], 'w')
+    s = input()
 
-#     s = input()
+    result = timeConversion(s)
 
-#     result = timeConversion(s)
+    fptr.write(result + '\n')
 
-#     fptr.write(result + '\n')
-
-#     fptr.close()
+    fptr.close()
