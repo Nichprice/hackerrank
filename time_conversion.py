@@ -14,17 +14,20 @@ import sys
 #
 s = "07:05:45PM"
 
+
 def timeConversion(s):
     # Write your code here
-    split = s.split(":")
-    switcher = split[2]
-    if "PM" in split[2]:
-      first = int(split[0]) +12
-      split[0] = str(first)
-    broken_decider = list(switcher)
-    print(broken_decider)
-    prbroken_decider.pop()
-  
+    time = s.split(":")
+    if s[-2:] == "PM":
+        if time[0] != "12":
+            time[0] = str(int(time[0]) + 12)
+    else:
+        if time[0] == "12":
+            time[0] == ""
+    ntime = ":".join(time)
+    print(ntime[:-2])
+    return str(ntime[:-2])
+
 timeConversion(s)
 
 # if __name__ == '__main__':
