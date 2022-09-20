@@ -11,7 +11,7 @@ import sys
 #
 # The function is expected to return a STRING.
 # The function accepts STRING s as parameter.
-#
+
 
 def timeConversion(s):
     # Write your code here
