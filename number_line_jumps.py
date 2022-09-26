@@ -6,10 +6,35 @@
 
 
 def kangaroo(x1, v1, x2, v2):
-  first = [x1]
-  secont = [x2]
-    if x1 == x2:
-      print('YES')
+    # Write your code here
+    arrA = []
+    arrB = []
+    arrA.append(x1)
+    arrB.append(x2)
+    keepgoing = True
+    answer = ""
+    n = 0
+    if x1 > x2 and v1 > v2:
+        answer = "NO"
+    elif x2 > x1 and v2 > v1:
+        answer = "NO"
+    elif v1 == v2:
+        answer = "NO"
     else:
-      while
-      first.append(first[])
+        while keepgoing:
+            if arrA[n] != arrB[n]:
+                n += 1
+                arrA.append(x1 + v1 * n)
+                arrB.append(x2 + v2 * n)
+                if arrA[n-1] > arrB[n-1]:
+                    if arrA[n] < arrB[n]:
+                        answer = "NO"
+                        keepgoing = False
+                elif arrA[n-1] < arrB[n-1]:
+                    if arrA[n] > arrB[n]:
+                        answer = "NO"
+                        keepgoing = False
+            elif arrA[n] == arrB[n]:
+                answer = "YES"
+                keepgoing = False
+    return answer
