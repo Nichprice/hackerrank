@@ -14,5 +14,8 @@ def dayOfProgrammer(year):
             day = '12'
         else:
             day = '13'
-    date = f'{day}.{month}.{year}'
+    date = 'f{day}.{month}.{year}'
+    print(date)
     return date
+
+dayOfProgrammer(1918)
