@@ -1,5 +1,5 @@
 n = 6
-p = 5
+p = 2
 
 def pageCount(n, p):
     # Write your code here
