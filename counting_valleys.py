@@ -16,3 +16,4 @@ def countingValleys(steps, path):
             if map[n-1] < 0:
                 valleys += 1
     return valleys
+
