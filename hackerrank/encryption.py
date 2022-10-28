@@ -1,3 +1,5 @@
+import math
+
 def encryption(s):
     # Write your code here
     sq_rt = len(s) ** .5
@@ -6,7 +8,6 @@ def encryption(s):
     for num in range(col):
         ans.append([])
     for i in range(len(s)):
-        index = i % col
         ans[i % col].append(s[i])
     for num in range(col):
         ans[num] = (''.join(ans[num]))
