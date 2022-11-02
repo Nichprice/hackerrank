@@ -10,4 +10,4 @@ def workbook(n, k, arr):
 
       if problem == probs or problem % k == 0:
         page += 1
-  print(ans)
+  return ans
