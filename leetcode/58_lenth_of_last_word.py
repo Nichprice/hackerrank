@@ -18,3 +18,25 @@ class Solution:
                 m -= 1
         
         return ans
+
+## slightly better version
+
+class Solution:
+    def lengthOfLastWord(self, s: str) -> int:
+
+        m = len(s) - 1
+
+        ans = 0
+
+        while m >= 0:
+            if s[m] == ' ':
+                m -= 1
+            
+            elif s[m] != ' ':
+                ans += 1
+                if s[m - 1] == ' ':
+                    break
+                m -= 1
+
+        
+        return ans
